@@ -1,6 +1,7 @@
 import os
 import telebot
 from flask import Flask, request, jsonify
+from flask_cors import CORS 
 
 # --- НАСТРОЙКИ ---
 BOT_TOKEN = '9196534345:AAHo_yMuLoLiKgEDdwIvdBeluNN_SLX1Mz4'
@@ -8,6 +9,7 @@ ADMIN_IDS = [1277087710]
 
 bot = telebot.TeleBot(BOT_TOKEN)
 app = Flask(__name__)
+CORS(app)  
 
 @bot.message_handler(commands=['start'])
 def start(message):
