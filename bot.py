@@ -21,6 +21,7 @@ def webhook():
         f"👤 <b>Имя:</b> {data.get('name')}\n"
         f"📞 <b>Телефон:</b> {data.get('phone')}\n"
         f"🎮 <b>Формат:</b> {data.get('type')}\n"
+        f"⏳ <b>Время игры:</b> {data.get('duration')}\n"  # <--- ДОБАВИТЬ ЭТУ СТРОКУ
         f"📅 <b>Дата:</b> {data.get('date')}\n"
         f"⏰ <b>Время:</b> {data.get('time')}"
     )
